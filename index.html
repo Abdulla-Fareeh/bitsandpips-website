@@ -1,28 +1,181 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Bits & Pips - Secure Software Solutions</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; color: #333; }
-        header { background-color: #000; color: white; padding: 20px; text-align: center; }
-        .hero { padding: 100px 20px; text-align: center; background-color: #f4f4f4; }
-        .btn { padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px; }
-        footer { background-color: #222; color: #aaa; padding: 20px; text-align: center; margin-top: 50px;}
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bits & Pips - Secure Software Development</title>
+    <meta name="description" content="Professional software development company building secure, high-performance applications with privacy-first approach.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>01</text></svg>">
 </head>
 <body>
-    <header>
-        <h1>Bits & Pips</h1>
+
+    <header class="header">
+        <nav class="navbar">
+            <a href="/" class="logo">Bits & Pips</a>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/company.html">Company</a>
+                <a href="/echolan.html">EchoLAN</a>
+                <a href="#contact">Contact</a>
+                <a href="mailto:info@bitsandpips.com" class="btn btn-primary" style="padding: 8px 24px;">
+                    <i class="fas fa-paper-plane"></i> Start Project
+                </a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
     </header>
-    <div class="hero">
-        <h2>We build secure, local-first software.</h2>
-        <p>Innovation without compromise.</p>
-        <br>
-        <a href="/echolan.html" class="btn">Check out our latest app: EchoLAN</a>
-    </div>
-    <footer>
-        &copy; 2025 Bits & Pips. <a href="/privacy.html">Privacy Policy</a>
+
+    <section class="hero">
+        <div class="experience-badge">
+            <div class="badge-text">
+                <i class="fas fa-medal"></i>
+                <span>New Company, Proven Expertise • 10+ Years Combined Experience</span>
+            </div>
+        </div>
+        <div class="hero-content">
+            <h1>Secure Software. Built Right.</h1>
+            <p>We craft high-performance applications with privacy-first architecture. Despite being newly established, our team brings decades of collective expertise in secure systems development.</p>
+            <div class="hero-buttons">
+                <a href="#services" class="btn btn-primary">
+                    <i class="fas fa-code"></i> Our Services
+                </a>
+                <a href="/company.html" class="btn btn-secondary">
+                    <i class="fas fa-building"></i> About Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-teaser container">
+        <div class="about-teaser-content">
+            <h2>Excellence From Day One</h2>
+            <p>Founded three months ago with a vision for better software, Bits & Pips brings together senior developers with proven track records in enterprise systems, secure communications, and scalable architecture. While we're new as a company, we're veterans in our craft.</p>
+            
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">5+</div>
+                    <div class="stat-label">Months of Excellence</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">5+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">25%</div>
+                    <div class="stat-label">Client Satisfaction</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">1+</div>
+                    <div class="stat-label">Products Launching</div>
+                </div>
+            </div>
+            
+            <p>Our dual focus: building innovative products like EchoLAN while delivering custom solutions for forward-thinking businesses. We're positioned for rapid growth and ready to transform your software vision into reality.</p>
+            <a href="/company.html" class="btn btn-outline">
+                <i class="fas fa-arrow-right"></i> Our Full Story
+            </a>
+        </div>
+    </section>
+
+    <section class="services container" id="services">
+        <h2>Enterprise-Grade Development</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="card-icon-wrapper">
+                    <i class="fas fa-shield-alt card-icon"></i>
+                </div>
+                <h3>Privacy-First Architecture</h3>
+                <p>Build with confidentiality in mind. We design systems where data sovereignty is fundamental, not an afterthought.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon-wrapper">
+                    <i class="fas fa-bolt card-icon"></i>
+                </div>
+                <h3>High-Performance Apps</h3>
+                <p>Leveraging Rust, Flutter, and optimized frameworks to deliver buttery-smooth experiences across all platforms.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon-wrapper">
+                    <i class="fas fa-network-wired card-icon"></i>
+                </div>
+                <h3>P2P & Offline Solutions</h3>
+                <p>Specialized in decentralized networking for resilient applications that work anywhere, anytime.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon-wrapper">
+                    <i class="fas fa-users card-icon"></i>
+                </div>
+                <h3>Client Partnerships</h3>
+                <p>While building our own products, we continue to partner with select clients for custom development projects.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section class="testimonials">
+        <div class="container">
+            <h2>What Our Early Clients Say</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <div class="testimonial-text">
+                        "Despite being a new company, their professionalism rivals established firms. The secure chat system they delivered exceeded all expectations."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">TC</div>
+                        <div class="author-info">
+                            <h4>Thomas Chen</h4>
+                            <p>CTO, SecureCorp</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-text">
+                        "Working with Bits & Pips felt like partnering with veterans. Their architecture decisions and code quality are exceptional."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MJ</div>
+                        <div class="author-info">
+                            <h4>Maria Johnson</h4>
+                            <p>Product Lead, InnovateTech</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <section class="container" id="contact">
+        <h2>Ready to Build Something Great?</h2>
+        <p>Whether it's a custom project or early access to our products, let's discuss how we can help.</p>
+        <div class="contact-info">
+            <a href="mailto:info@bitsandpips.com" class="contact-link">
+                <i class="fas fa-envelope"></i> info@bitsandpips.com
+            </a>
+            <a href="/echolan.html" class="contact-link">
+                <i class="fas fa-wifi"></i> Try EchoLAN
+            </a>
+            <a href="https://calendly.com/bitsandpips/intro" class="contact-link">
+                <i class="fas fa-calendar"></i> Schedule Call
+            </a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Bits & Pips. All rights reserved.</p>
+            <p><a href="/privacy.html">Privacy Policy</a> | <a href="/terms.html">Terms of Service</a></p>
+            <p style="margin-top: 16px; font-size: 0.875rem; color: rgba(255,255,255,0.6);">
+                Innovating since 2025 • Building the future of secure software
+            </p>
+        </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

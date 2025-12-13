@@ -1,34 +1,161 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>EchoLAN - P2P Chat by Bits & Pips</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        /* Add similar styles as index.html */
-        body { font-family: sans-serif; text-align: center; }
-        .download-grid { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 40px;}
-        .download-card { border: 1px solid #ddd; padding: 20px; border-radius: 10px; width: 200px; }
-    </style>
-</head>
-<body>
-    <h1>EchoLAN</h1>
-    <p>Secure, Serverless, LAN Communication.</p>
-    
-    <div class="download-grid">
-        <div class="download-card">
-            <h3>macOS</h3>
-            <p>For Intel & Silicon</p>
-            <!-- Link to your GitHub Release asset -->
-            <a href="LINK_TO_YOUR_DMG_ON_GITHUB">Download .DMG</a>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EchoLAN - Secure P2P Chat by Bits & Pips</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <a href="/" class="logo">Bits & Pips</a>
+        <div class="nav-links">
+          <a href="/">Home</a>
+          <a href="/company.html">About</a>
+          <a href="/echolan.html" style="color: #2563eb">EchoLAN</a>
+          <a href="#contact">Contact</a>
         </div>
-        <div class="download-card">
-            <h3>Android</h3>
-            <p>Android 8.0+</p>
-            <!-- Link to your GitHub Release asset -->
-            <a href="LINK_TO_YOUR_APK_ON_GITHUB">Download .APK</a>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
-    </div>
-    
-    <p style="margin-top:50px"><a href="/">Back to Bits & Pips</a></p>
-</body>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-emoji">
+          <img src="hero-icon.png" alt="EchoLAN Signal" class="hero-gif" />
+        </div>
+        <h1>EchoLAN</h1>
+        <p>
+          The ultimate peer-to-peer app for chat, file sharing, and video
+          calls—entirely local, server-free, and built for privacy.
+        </p>
+        <div class="hero-buttons">
+          <a href="#downloads" class="btn btn-primary">Download Now</a>
+          <a href="#features" class="btn btn-secondary">Explore Features</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="features container" id="features">
+      <h2>Why EchoLAN?</h2>
+      <div class="grid">
+        <div class="card">
+          <div class="card-icon-wrapper">
+            <i class="fas fa-wifi card-icon"></i>
+          </div>
+          <h3>Offline Magic</h3>
+          <p>
+            Discover and connect with nearby devices on your Wi-Fi using
+            Bonjour—no internet, no hassle. Ideal for teams, events, or spotty
+            connections.
+          </p>
+        </div>
+        <div class="card">
+          <div class="card-icon-wrapper">
+            <i class="fas fa-file-export card-icon"></i>
+          </div>
+          <h3>Lightning Transfers</h3>
+          <p>
+            Share files and media at full LAN speeds—up to 10x faster than cloud
+            services, with zero data leaving your network.
+          </p>
+        </div>
+        <div class="card">
+          <div class="card-icon-wrapper">
+            <i class="fas fa-lock card-icon"></i>
+          </div>
+          <h3>Zero-Knowledge Privacy</h3>
+          <p>
+            End-to-end encryption ensures chats and calls stay between devices.
+            No servers, no tracking—just pure, private communication.
+          </p>
+        </div>
+        <div class="card">
+          <div class="card-icon-wrapper">
+            <i class="fas fa-users card-icon"></i>
+          </div>
+          <h3>Simple & Secure</h3>
+          <p>
+            Easy user discovery with accept/decline prompts, plus built-in
+            blocking and optional email reporting for seamless support.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="downloads container" id="downloads">
+      <h2>Download EchoLAN</h2>
+      <p class="version-note">
+        Version 1.0.0 | Cross-Platform: Android, iOS, macOS, Windows, Linux
+      </p>
+      <div class="download-grid">
+        <a href="INSERT_GITHUB_DMG_LINK_HERE" class="dl-btn mac">
+          <i class="fab fa-apple dl-icon"></i>
+          <span>macOS</span>
+        </a>
+        <a href="INSERT_GITHUB_APK_LINK_HERE" class="dl-btn android">
+          <i class="fab fa-android dl-icon"></i>
+          <span>Android (APK)</span>
+        </a>
+        <a
+          href="https://github.com/YOUR_USER/REPO/releases"
+          class="dl-btn windows"
+        >
+          <i class="fab fa-windows dl-icon"></i>
+          <span>Windows (EXE/ZIP)</span>
+        </a>
+        <a
+          href="https://github.com/YOUR_USER/REPO/releases"
+          class="dl-btn linux"
+        >
+          <i class="fab fa-linux dl-icon"></i>
+          <span>Linux (DEB/AppImage)</span>
+        </a>
+        <a href="https://github.com/YOUR_USER/REPO" class="dl-btn ios">
+          <i class="fab fa-app-store-ios dl-icon"></i>
+          <span>iOS (Build from Source)</span>
+        </a>
+      </div>
+      <p class="download-note">
+        * Windows & Linux releases via GitHub. For iOS, use Xcode to build from
+        our open-source repo. Questions?
+        <a href="mailto:info@bitsandpips.com">Email us</a>.
+      </p>
+    </section>
+
+    <section class="container" id="contact">
+      <h2>Need Help or Feedback?</h2>
+      <p>We're here to support your EchoLAN experience.</p>
+      <div class="contact-info">
+        <a href="mailto:info@bitsandpips.com" class="contact-link">
+          <i class="fas fa-envelope"></i> info@bitsandpips.com
+        </a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2025 Bits & Pips. All rights reserved.</p>
+        <p>
+          <a href="/privacy.html">Privacy Policy</a> |
+          <a href="/terms.html">Terms of Service</a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>
