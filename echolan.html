@@ -21,7 +21,7 @@
         <div class="nav-links">
           <a href="/">Home</a>
           <a href="/company.html">About</a>
-          <a href="/echolan.html" style="color: #2563eb">EchoLAN</a>
+          <a href="/echolan.html" style="color: #0066ff">EchoLAN</a>
           <a href="#contact">Contact</a>
         </div>
         <div class="hamburger">
@@ -34,8 +34,9 @@
 
     <section class="hero">
       <div class="hero-content">
+        <!-- Animated GIF Icon -->
         <div class="hero-emoji">
-          <img src="hero-icon.png" alt="EchoLAN Signal" class="hero-gif" />
+          <img src="hero-icon.gif" alt="EchoLAN Signal" class="hero-gif" />
         </div>
         <h1>EchoLAN</h1>
         <p>
@@ -101,39 +102,71 @@
       <p class="version-note">
         Version 1.0.0 | Cross-Platform: Android, iOS, macOS, Windows, Linux
       </p>
+
       <div class="download-grid">
-        <a href="INSERT_GITHUB_DMG_LINK_HERE" class="dl-btn mac">
+        <!-- macOS (Active) -->
+        <a
+          href="https://github.com/abdulla-fareeh/bitsandpips-website/releases/download/v1.0.0/EchoLAN_Installer.dmg"
+          class="dl-btn mac"
+        >
           <i class="fab fa-apple dl-icon"></i>
           <span>macOS</span>
         </a>
-        <a href="INSERT_GITHUB_APK_LINK_HERE" class="dl-btn android">
-          <i class="fab fa-android dl-icon"></i>
-          <span>Android (APK)</span>
-        </a>
+
+        <!-- Windows (Active) -->
         <a
-          href="https://github.com/YOUR_USER/REPO/releases"
+          href="https://github.com/abdulla-fareeh/bitsandpips-website/releases/download/v1.0.0/EchoLAN_Setup.exe"
           class="dl-btn windows"
         >
           <i class="fab fa-windows dl-icon"></i>
-          <span>Windows (EXE/ZIP)</span>
+          <span>Windows</span>
         </a>
+
+        <!-- Linux (Active) -->
         <a
-          href="https://github.com/YOUR_USER/REPO/releases"
+          href="https://github.com/abdulla-fareeh/bitsandpips-website/releases/download/v1.0.0/echolan_1.0.0_amd64.deb"
           class="dl-btn linux"
         >
           <i class="fab fa-linux dl-icon"></i>
-          <span>Linux (DEB/AppImage)</span>
+          <span>Linux (.deb)</span>
         </a>
-        <a href="https://github.com/YOUR_USER/REPO" class="dl-btn ios">
+
+        <!-- Android (Coming Soon) -->
+        <div class="dl-btn coming-soon">
+          <i class="fab fa-google-play dl-icon"></i>
+          <span>Google Play</span>
+          <span class="btn-subtext">Coming Soon</span>
+        </div>
+
+        <!-- iOS (Coming Soon) -->
+        <div class="dl-btn coming-soon">
           <i class="fab fa-app-store-ios dl-icon"></i>
-          <span>iOS (Build from Source)</span>
-        </a>
+          <span>App Store</span>
+          <span class="btn-subtext">Coming Soon</span>
+        </div>
       </div>
-      <p class="download-note">
-        * Windows & Linux releases via GitHub. For iOS, use Xcode to build from
-        our open-source repo. Questions?
-        <a href="mailto:info@bitsandpips.com">Email us</a>.
-      </p>
+
+      <div
+        style="
+          text-align: center;
+          margin-top: 30px;
+          font-size: 0.9rem;
+          color: #666;
+        "
+      >
+        <p>
+          <strong>Linux Users:</strong> Not on Debian/Ubuntu?
+          <a
+            href="https://github.com/abdulla-fareeh/bitsandpips-website/releases/download/v1.0.0/echolan_1.0.0_portable.tar.gz"
+            style="color: #0066ff; text-decoration: underline"
+            >Download Portable Tarball (.tar.gz)</a
+          >
+        </p>
+        <p style="margin-top: 10px; font-size: 0.85rem; opacity: 0.8">
+          *Desktop versions utilize local network discovery. Mobile versions
+          awaiting store approval.
+        </p>
+      </div>
     </section>
 
     <section class="container" id="contact">
@@ -148,7 +181,7 @@
 
     <footer class="footer">
       <div class="container">
-        <p>&copy; 2025 Bits & Pips. All rights reserved.</p>
+        <p>&copy; 2025 Bits & Pips Maldives Pvt Ltd. All rights reserved.</p>
         <p>
           <a href="/privacy.html">Privacy Policy</a> |
           <a href="/terms.html">Terms of Service</a>

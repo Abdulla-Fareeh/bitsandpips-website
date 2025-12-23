@@ -692,3 +692,51 @@ body {
         font-size: 2rem;
     }
 }
+
+/* Add to bottom of style.css */
+
+/* Custom grid for Company Page */
+.company-grid {
+    display: grid;
+    gap: 40px;
+    grid-template-columns: 1fr; /* Mobile: Stack vertically (1 column) */
+}
+
+/* On Desktop/Tablet only */
+@media (min-width: 768px) {
+    .company-grid {
+        grid-template-columns: 1fr 1fr; /* Desktop: 2 columns */
+    }
+    
+    .span-2-desktop {
+        grid-column: span 2; /* Make the Mission card wide on desktop */
+    }
+}
+
+/* Add to the bottom of style.css */
+
+.dl-btn.coming-soon {
+    background-color: #f1f5f9; /* Light Gray */
+    color: #64748b; /* Muted Text */
+    cursor: default; /* Arrow cursor instead of hand */
+    border: 1px solid #e2e8f0;
+    box-shadow: none;
+    position: relative;
+    opacity: 0.8;
+}
+
+.dl-btn.coming-soon:hover {
+    transform: none; /* No movement on hover */
+    box-shadow: none;
+    border-color: #e2e8f0;
+}
+
+.btn-subtext {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 500;
+    margin-top: 4px;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
