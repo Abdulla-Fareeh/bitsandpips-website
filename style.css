@@ -46,7 +46,8 @@ body {
     backdrop-filter: blur(10px);
     z-index: 1000;
     border-bottom: 1px solid rgba(0, 102, 255, 0.1);
-    -webkit-backdrop-filter: blur(10px);/* Adds Safari support */
+    -webkit-backdrop-filter: blur(10px);
+    /* Adds Safari support */
 }
 
 .navbar {
@@ -58,7 +59,23 @@ body {
     margin: 0 auto;
 }
 
+/* Updated Logo Styles */
 .logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    /* Adjust height to fit navbar */
+    width: auto;
+    /* Keep aspect ratio */
+    object-fit: contain;
+}
+
+/* Remove the old text-based logo styles (font-size, gradient, etc) if they conflict */
+
+/* .logo {
     font-size: 1.75rem;
     font-weight: 800;
     background: var(--gradient-primary);
@@ -79,7 +96,7 @@ body {
     padding: 4px 8px;
     border-radius: 4px;
     font-weight: 600;
-}
+} */
 
 .nav-links {
     display: flex;
@@ -444,11 +461,14 @@ body {
 
 /* Add this new class to control the GIF size */
 .hero-gif {
-    width: 120px; /* Adjust this number to make it bigger/smaller */
+    width: 120px;
+    /* Adjust this number to make it bigger/smaller */
     height: auto;
     display: block;
-    margin: 0 auto; /* Centers the image */
-    filter: drop-shadow(0 10px 15px rgba(0, 102, 255, 0.3)); /* Adds a cool glow */
+    margin: 0 auto;
+    /* Centers the image */
+    filter: drop-shadow(0 10px 15px rgba(0, 102, 255, 0.3));
+    /* Adds a cool glow */
 }
 
 @keyframes float {
@@ -699,26 +719,32 @@ body {
 .company-grid {
     display: grid;
     gap: 40px;
-    grid-template-columns: 1fr; /* Mobile: Stack vertically (1 column) */
+    grid-template-columns: 1fr;
+    /* Mobile: Stack vertically (1 column) */
 }
 
 /* On Desktop/Tablet only */
 @media (min-width: 768px) {
     .company-grid {
-        grid-template-columns: 1fr 1fr; /* Desktop: 2 columns */
+        grid-template-columns: 1fr 1fr;
+        /* Desktop: 2 columns */
     }
-    
+
     .span-2-desktop {
-        grid-column: span 2; /* Make the Mission card wide on desktop */
+        grid-column: span 2;
+        /* Make the Mission card wide on desktop */
     }
 }
 
 /* Add to the bottom of style.css */
 
 .dl-btn.coming-soon {
-    background-color: #f1f5f9; /* Light Gray */
-    color: #64748b; /* Muted Text */
-    cursor: default; /* Arrow cursor instead of hand */
+    background-color: #f1f5f9;
+    /* Light Gray */
+    color: #64748b;
+    /* Muted Text */
+    cursor: default;
+    /* Arrow cursor instead of hand */
     border: 1px solid #e2e8f0;
     box-shadow: none;
     position: relative;
@@ -726,7 +752,8 @@ body {
 }
 
 .dl-btn.coming-soon:hover {
-    transform: none; /* No movement on hover */
+    transform: none;
+    /* No movement on hover */
     box-shadow: none;
     border-color: #e2e8f0;
 }
