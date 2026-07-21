@@ -1,24 +1,11 @@
 {
   "platforms": {
-    "android": {
-      "version": "1.0.1",
-      "url": "https://play.google.com/store/apps/details?id=com.bitsandpips.echolan"
-    },
-    "ios": {
-      "version": "1.0.1",
-      "url": "https://apps.apple.com/app/echolan/id6744495345"
-    },
-    "windows": {
-      "version": "1.0.2",
-      "url": "https://www.bitsandpips.com/echolan.html#downloads"
-    },
-    "linux": {
-      "version": "1.0.1",
-      "url": "https://www.bitsandpips.com/echolan.html#downloads"
-    },
-    "macos": {
-      "version": "1.0.1",
-      "url": "https://www.bitsandpips.com/echolan.html#downloads"
-    }
+    "windows":     { "version": "1.0.2", "url": "https://bitsandpips.com/echolan/downloads/EchoLAN_Setup_x64.exe" },
+    "windows-arm": { "version": "", "url": "" },
+    "linux":       { "version": "1.0.2", "url": "https://bitsandpips.com/echolan/downloads/echolan_1.0.2_amd64.deb" },
+    "linux-arm":   { "version": "", "url": "" },
+    "android":     { "version": "1.0.2", "url": "https://play.google.com/store/apps/details?id=com.bitsandpips.echolan" },
+    "ios":         { "version": "", "url": "" },
+    "macos":       { "version": "", "url": "" }
   }
 }
