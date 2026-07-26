@@ -51,29 +51,36 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Add scroll effect to header
-    let lastScroll = 0;
+    // Dynamic Header - Shrinks and adds blur on scroll
     const header = document.querySelector('.header');
-    
     window.addEventListener('scroll', () => {
-        const currentScroll = window.pageYOffset;
-        
-        if (currentScroll <= 0) {
-            header.style.boxShadow = 'none';
-            return;
-        }
-        
-        if (currentScroll > lastScroll && currentScroll > 100) {
-            // Scrolling down
-            header.style.transform = 'translateY(-100%)';
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
         } else {
-            // Scrolling up
-            header.style.transform = 'translateY(0)';
-            header.style.boxShadow = '0 4px 20px rgba(0, 102, 255, 0.08)';
+            header.classList.remove('scrolled');
         }
-        
-        lastScroll = currentScroll;
     });
+
+    // Scroll Reveal Animation
+    const revealElements = document.querySelectorAll('.card, .about-teaser-content, .hero-content, .dl-btn, .contact-info, .stat-item, .testimonial');
+    revealElements.forEach(el => el.classList.add('reveal-hidden'));
+
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('reveal-visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+
+    // Particles Animation for Hero Section
+    initParticles();
     
     // Card hover animation enhancement
     const cards = document.querySelectorAll('.card, .dl-btn');
@@ -115,9 +122,90 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Current year in footer
-    const yearElement = document.querySelector('footer p:first-child');
+    const yearElement = document.querySelector('.footer-bottom p:first-child');
     if (yearElement) {
         const currentYear = new Date().getFullYear();
         yearElement.innerHTML = yearElement.innerHTML.replace('2025', currentYear);
     }
 });
+
+// Particles Animation Logic
+function initParticles() {
+    const hero = document.querySelector('.hero');
+    if (!hero) return;
+
+    const canvas = document.createElement('canvas');
+    canvas.classList.add('particles-canvas');
+    hero.insertBefore(canvas, hero.firstChild);
+
+    const ctx = canvas.getContext('2d');
+    let width, height, particles;
+
+    function resize() {
+        width = hero.offsetWidth;
+        height = hero.offsetHeight;
+        canvas.width = width;
+        canvas.height = height;
+    }
+    
+    window.addEventListener('resize', resize);
+    resize();
+
+    class Particle {
+        constructor() {
+            this.x = Math.random() * width;
+            this.y = Math.random() * height;
+            this.vx = (Math.random() - 0.5) * 0.5;
+            this.vy = (Math.random() - 0.5) * 0.5;
+            this.radius = Math.random() * 2 + 1;
+        }
+        update() {
+            this.x += this.vx;
+            this.y += this.vy;
+            if (this.x < 0 || this.x > width) this.vx *= -1;
+            if (this.y < 0 || this.y > height) this.vy *= -1;
+        }
+        draw() {
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+            ctx.fillStyle = 'rgba(0, 212, 170, 0.4)';
+            ctx.fill();
+        }
+    }
+
+    function init() {
+        particles = [];
+        const numParticles = Math.min(Math.floor((width * height) / 15000), 100);
+        for (let i = 0; i < numParticles; i++) {
+            particles.push(new Particle());
+        }
+    }
+
+    function animate() {
+        requestAnimationFrame(animate);
+        ctx.clearRect(0, 0, width, height);
+
+        for (let i = 0; i < particles.length; i++) {
+            particles[i].update();
+            particles[i].draw();
+
+            for (let j = i + 1; j < particles.length; j++) {
+                const dx = particles[i].x - particles[j].x;
+                const dy = particles[i].y - particles[j].y;
+                const distance = Math.sqrt(dx * dx + dy * dy);
+
+                if (distance < 120) {
+                    ctx.beginPath();
+                    ctx.moveTo(particles[i].x, particles[i].y);
+                    ctx.lineTo(particles[j].x, particles[j].y);
+                    ctx.strokeStyle = `rgba(0, 102, 255, ${1 - distance / 120})`;
+                    ctx.lineWidth = 0.5;
+                    ctx.stroke();
+                }
+            }
+        }
+    }
+
+    init();
+    animate();
+}

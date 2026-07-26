@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Bits & Pips</title>
+    <link rel="canonical" href="https://www.bitsandpips.com/contact.html" />
+    <meta
+      name="description"
+      content="Get in touch with Bits & Pips. We're here to help you with secure software development and peer-to-peer solutions."
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <a href="/" class="logo">
+          <img src="logo.png" alt="Bits & Pips" />
+        </a>
+        <div class="nav-links">
+          <a href="/index.html">Home</a>
+          <a href="/company.html">Company</a>
+          <a href="/echolan.html">EchoLAN</a>
+          <a href="/contact.html" style="color: #0066ff">Contact</a>
+        </div>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
+
+    <section class="hero" style="padding-bottom: 80px">
+      <div class="hero-content">
+        <h1>Let's Connect</h1>
+        <p>
+          Have a question about EchoLAN or looking for a custom enterprise solution? Fill out the form below and we'll get back to you shortly.
+        </p>
+      </div>
+    </section>
+
+    <section class="container" style="margin-top: -60px; position: relative; z-index: 10; padding-bottom: 100px;">
+      <div class="card" style="max-width: 700px; margin: 0 auto; padding: 40px;">
+        
+        <div id="form-success" style="display: none; text-align: center; padding: 40px 20px;">
+          <i class="fas fa-check-circle" style="font-size: 4rem; color: var(--accent-teal); margin-bottom: 20px;"></i>
+          <h3 style="font-size: 1.5rem; margin-bottom: 10px;">Message Sent Successfully!</h3>
+          <p style="color: var(--neutral-gray);">Thank you for reaching out. We will get back to you as soon as possible.</p>
+          <button onclick="resetForm()" class="btn btn-outline" style="margin-top: 24px;">Send Another Message</button>
+        </div>
+
+        <form id="contact-form" class="contact-form">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required placeholder="John Doe">
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required placeholder="john@example.com">
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <select id="subject" name="subject" required>
+              <option value="" disabled selected>Select a subject</option>
+              <option value="EchoLAN Support">EchoLAN Support</option>
+              <option value="Custom Development">Custom Enterprise Development</option>
+              <option value="Partnership">Partnership Inquiry</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required placeholder="How can we help you?"></textarea>
+          </div>
+          
+          <button type="submit" class="btn btn-primary" id="submit-btn" style="width: 100%; justify-content: center;">
+            <span>Send Message</span>
+            <i class="fas fa-paper-plane" style="margin-left: 8px;"></i>
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <a href="/" class="logo" style="margin-bottom: 20px; filter: brightness(0) invert(1);">
+              <img src="logo.png" alt="Bits & Pips" style="height: 40px;" />
+            </a>
+            <p style="text-align: left; font-size: 0.9rem; margin-bottom: 20px; max-width: 250px;">Building the next generation of secure, decentralized applications with a privacy-first approach.</p>
+          </div>
+          
+          <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="/index.html">Home</a></li>
+              <li><a href="/company.html">About Us</a></li>
+              <li><a href="/index.html#services">Services</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-col">
+            <h4>Products</h4>
+            <ul>
+              <li><a href="/echolan.html">EchoLAN</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-col">
+            <h4>Contact</h4>
+            <ul>
+              <li><a href="mailto:info@bitsandpips.com">info@bitsandpips.com</a></li>
+              <li><a href="https://calendly.com/bitsandpips/intro" target="_blank">Schedule a Call</a></li>
+              <li style="color: rgba(255, 255, 255, 0.7); font-size: 0.95rem; margin-top: 12px;">Male', Maldives</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="footer-bottom">
+          <p>&copy; 2025 Bits & Pips Maldives Pvt Ltd. All rights reserved.</p>
+          <p style="text-align: right;">
+            <a href="/privacy.html" style="font-size: 0.85rem; color: rgba(255, 255, 255, 0.6);">Privacy Policy</a> &nbsp;|&nbsp;
+            <a href="/terms.html" style="font-size: 0.85rem; color: rgba(255, 255, 255, 0.6);">Terms of Service</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+      // Form Submission Logic to Google Apps Script
+      // User Instructions: 
+      // 1. Create a Google Sheet
+      // 2. Go to Extensions > Apps Script
+      // 3. Paste the provided Apps Script code and deploy as Web App (Anyone with link)
+      // 4. Paste the Web App URL below:
+      const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyDqcnpNn7iawK6VzcEbz6-_SqnZO2l3pDaeotaLv6zfom2e1WUo_gL36GViPlkXwyZ_g/exec';
+
+      const form = document.getElementById('contact-form');
+      const submitBtn = document.getElementById('submit-btn');
+      const successDiv = document.getElementById('form-success');
+
+      if (form) {
+        form.addEventListener('submit', e => {
+          e.preventDefault();
+          
+          if (GOOGLE_SCRIPT_URL === 'YOUR_GOOGLE_SCRIPT_URL_HERE') {
+            alert('Please configure your GOOGLE_SCRIPT_URL in contact.html to enable form submissions.');
+            return;
+          }
+
+          const formData = new FormData(form);
+          const data = new URLSearchParams(formData);
+          const originalBtnText = submitBtn.innerHTML;
+          
+          submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+          submitBtn.disabled = true;
+
+          fetch(GOOGLE_SCRIPT_URL, {
+            method: 'POST',
+            body: data
+          })
+          .then(response => {
+            form.style.display = 'none';
+            successDiv.style.display = 'block';
+          })
+          .catch(error => {
+            console.error('Error!', error.message);
+            alert('There was an error sending your message. Please try again or email us directly.');
+          })
+          .finally(() => {
+            submitBtn.innerHTML = originalBtnText;
+            submitBtn.disabled = false;
+          });
+        });
+      }
+
+      function resetForm() {
+        form.reset();
+        successDiv.style.display = 'none';
+        form.style.display = 'block';
+      }
+    </script>
+  </body>
+</html>
