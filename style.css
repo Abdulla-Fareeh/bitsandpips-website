@@ -504,6 +504,7 @@ body {
 
 .screenshot-track {
     display: flex;
+    flex-wrap: nowrap;
     gap: 24px;
     width: max-content;
     margin: 0 auto;
@@ -511,6 +512,7 @@ body {
 }
 
 .screenshot-img {
+    flex: 0 0 auto; /* Prevents squishing */
     height: 450px;
     width: auto;
     border-radius: 16px;
@@ -525,12 +527,20 @@ body {
 
 @media (max-width: 768px) {
     .screenshot-img {
-        height: 350px;
+        height: 280px; /* Made smaller so you can see the next one peeking in */
     }
     .screenshot-track {
-        padding: 0 10px;
+        padding: 0 16px;
+        gap: 16px;
         justify-content: flex-start;
         margin: 0;
+    }
+    .app-screenshots {
+        padding-bottom: 32px;
+        scroll-snap-type: x mandatory; /* Optional: smooth snapping on mobile */
+    }
+    .screenshot-img {
+        scroll-snap-align: center;
     }
 }
 
