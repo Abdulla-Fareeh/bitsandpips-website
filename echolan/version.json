@@ -1,10 +1,10 @@
 {
   "platforms": {
-    "windows":     { "version": "1.0.2", "url": "https://github.com/abdulla-fareeh/bitsandpips-website/releases/download/v1.0.2/EchoLAN_Setup_x64.exe" },
+    "windows":     { "version": "1.1.0", "url": "https://github.com/bits-pips/bitsandpips-website/releases/download/v1.1.0/EchoLAN_Setup_x64.exe" },
     "windows-arm": { "version": "", "url": "" },
-    "linux":       { "version": "1.0.2", "url": "https://github.com/abdulla-fareeh/bitsandpips-website/releases/download/v1.0.2/echolan_1.0.2_amd64.deb" },
+    "linux":       { "version": "1.1.0", "url": "https://github.com/bits-pips/bitsandpips-website/releases/download/v1.1.0/echolan_1.1.0-5_amd64.deb" },
     "linux-arm":   { "version": "", "url": "" },
-    "android":     { "version": "1.0.2", "url": "https://play.google.com/store/apps/details?id=com.bitsandpips.echolan" },
+    "android":     { "version": "1.1.0", "url": "https://play.google.com/store/apps/details?id=com.bitsandpips.echolan" },
     "ios":         { "version": "", "url": "" },
     "macos":       { "version": "", "url": "" }
   }
